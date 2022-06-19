@@ -1,0 +1,6 @@
+@use "../foundation/variable" as v;
+
+body {
+  background-color: v.$back-color;
+  font-family: "Montserrat", sans-serif;
+}
