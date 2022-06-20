@@ -75,9 +75,17 @@ select {
     scroll-behavior: auto !important;
   }
 }
+html {
+  font-size: 62.5%;
+  /* sets the base font to 10px for easier math */
+}
+
 body {
   background-color: #ddd4cc;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
+  font-size: 1.6rem;
+  color: #192f60;
+  letter-spacing: 0.1em;
 }
 
 .l-top {

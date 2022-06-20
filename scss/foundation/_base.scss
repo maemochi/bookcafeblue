@@ -1,6 +1,15 @@
 @use "../foundation/variable" as v;
 
+html {
+  font-size: 62.5%; /* sets the base font to 10px for easier math */
+}
+
 body {
   background-color: v.$back-color;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
+  font-size: 1.6rem;
+  color: v.$font-color;
+  letter-spacing: 0.1em;
 }
+
+//font-family: "Montserrat", sans-serif;
