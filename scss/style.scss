@@ -23,9 +23,12 @@
 @use "object/component/map";
 @use "object/component/font";
 @use "object/component/heading";
+@use "object/component/text";
 
 /* Project* -------------------- */
 @use "object/project/header";
 @use "object/project/top";
+@use "object/project/footer";
+@use "object/project/content";
 
 /* Utility* -------------------- */

@@ -47,9 +47,9 @@
         <p class="c-font--m c-heading--top">
           Have a calm, relaxing and quiet time.
         </p>
-        <section>
+        <section class="p-content p-content-about">
           <h2 class="c-heading">About</h2>
-          <p>
+          <p class="c-text">
             京都市左京区一条寺駅から徒歩5分、住宅街にある古本屋カフェ。
             <br />台湾茶は、台湾在住経験のある店主が厳選した茶葉を使用。
             <br />読書のお供にパイナップルケーキもどうぞ。
@@ -57,25 +57,49 @@
           </p>
           <img src="/images/coffee.jpg" alt="" />
         </section>
-        <section>
+        <section class="p-content p-content-menu">
           <h2 class="c-heading">Menu</h2>
-          <h3>珈琲</h3>
-          <dl>
-            <dt>オリジナルブレンド</dt>
-            <dd>490円</dd>
-          </dl>
+          <div>
+            <h3>珈琲</h3>
+            <div class="c-text">
+              <dl>
+                <div class="p-content-menu__area">
+                  <dt>オリジナルブレンド</dt>
+                  <dd>490円</dd>
+                </div>
+                <div class="p-content-menu__area">
+                  <dt>アイスコーヒー</dt>
+                  <dd>490円</dd>
+                </div>
+                <div class="p-content-menu__area">
+                  <dt>デカフェ</dt>
+                  <dd>500円</dd>
+                </div>
+                <div class="p-content-menu__area">
+                  <dt>カフェラテ</dt>
+                  <dd>500円</dd>
+                </div>
+                <div class="p-content-menu__area">
+                  <dt>ソイラテ</dt>
+                  <dd>520円</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
         </section>
-        <section>
+        <section class="p-content p-content-access">
           <div>
             <h2 class="c-heading">Access</h2>
-            <p>叡山電鉄一条寺駅から徒歩約5分</p>
-            <p>〒 606-8184 <br />京都府京都市左京区一条寺×××</p>
-            <dl>
-              <dt>営業時間</dt>
-              <dd>10:00 ~ 17:00</dd>
-              <dt>定休日</dt>
-              <dd>火・金</dd>
-            </dl>
+            <div class="c-text">
+              <p>叡山電鉄一条寺駅から徒歩約5分</p>
+              <p>〒 606-8184 <br />京都府京都市左京区一条寺×××</p>
+              <dl>
+                <dt>営業時間</dt>
+                <dd>10:00 ~ 17:00</dd>
+                <dt>定休日</dt>
+                <dd>火・金</dd>
+              </dl>
+            </div>
           </div>
           <div class="c-map">
             <iframe
@@ -93,8 +117,8 @@
     </main>
 
     <footer class="l-footer p-footer">
-      <img src="/images/logo.png" alt="BOOKCAFE BLUE" />
-      <ul>
+      <img class="p-footer__logo" src="/images/logo.png" alt="BOOKCAFE BLUE" />
+      <ul class="p-footer__menu c-font--m">
         <li>About</li>
         <li>Menu</li>
         <li>Access</li>

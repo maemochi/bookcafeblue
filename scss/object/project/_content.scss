@@ -1,0 +1,15 @@
+.p-content {
+  h3 {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+  &-menu {
+    .c-text {
+      margin-top: 20px;
+    }
+    &__area {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
