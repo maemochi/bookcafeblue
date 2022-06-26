@@ -1,0 +1,5 @@
+@use "../foundation/variable" as v;
+
+.l-footer {
+  background-color: v.$main-color;
+}

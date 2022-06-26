@@ -1,0 +1,21 @@
+.p-top {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  &__hero {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    background-image: url(../images/hero_bookshelf.jpg);
+    height: 500px;
+    width: 60%;
+  }
+  &__logo {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    img {
+      height: 100px;
+    }
+  }
+}

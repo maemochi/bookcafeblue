@@ -13,12 +13,19 @@
 @use "layout/l-header";
 @use "layout/l-main";
 @use "layout/l-footer";
+@use "layout/l-container";
 
 /* Object
 ==========================*/
 
 /* Component* -------------------- */
+@use "object/component/icon";
+@use "object/component/map";
+@use "object/component/font";
+@use "object/component/heading";
 
 /* Project* -------------------- */
+@use "object/project/header";
+@use "object/project/top";
 
 /* Utility* -------------------- */

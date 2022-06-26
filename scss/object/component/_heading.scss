@@ -1,0 +1,13 @@
+@use "../../foundation/variable" as v;
+
+.c-heading {
+  &--top {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 3rem;
+    text-shadow: 1px 1px v.$main-color, -1px 1px v.$main-color,
+      1px -1px v.$main-color, -1px -1px v.$main-color;
+    // -webkit-text-stroke: 1px v.$main-color;
+  }
+}
