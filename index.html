@@ -15,7 +15,7 @@
   <body>
     <header class="l-header p-header">
       <nav>
-        <ul class="p-header__menu c-font--m">
+        <ul class="p-header__menu c-menu">
           <li><a>About</a></li>
           <li><a>Menu</a></li>
           <li><a>Access</a></li>
@@ -44,9 +44,7 @@
         <div class="p-top__hero"></div>
       </div>
       <div class="l-container">
-        <p class="c-font--m c-heading--top">
-          Have a calm, relaxing and quiet time.
-        </p>
+        <p class="c-heading--top">Have a calm, relaxing and quiet time.</p>
         <section class="p-content p-content-about">
           <h2 class="c-heading">About</h2>
           <p class="c-text">
@@ -117,13 +115,19 @@
     </main>
 
     <footer class="l-footer p-footer">
-      <img class="p-footer__logo" src="/images/logo.png" alt="BOOKCAFE BLUE" />
-      <ul class="p-footer__menu c-font--m">
-        <li>About</li>
-        <li>Menu</li>
-        <li>Access</li>
-      </ul>
-      <ul class="c-icon">
+      <div class="l-footer__inner">
+        <img
+          class="p-footer__logo"
+          src="/images/logo.png"
+          alt="BOOKCAFE BLUE"
+        />
+        <ul class="p-footer__menu c-menu">
+          <li>About</li>
+          <li>Menu</li>
+          <li>Access</li>
+        </ul>
+      </div>
+      <ul class="c-icon p-footer__icon">
         <li>
           <a href="#"><img src="images/Icon_Twitter.svg" alt="twitter" /></a>
         </li>

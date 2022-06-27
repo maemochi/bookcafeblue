@@ -1,5 +1,10 @@
+@use "../../foundation/mixin" as m;
+
 .c-icon {
   display: flex;
-  gap: 90px;
+  gap: 30px;
   padding: 0;
+  @include m.mq(tab) {
+    gap: 90px;
+  }
 }

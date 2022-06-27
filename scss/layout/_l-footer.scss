@@ -1,5 +1,15 @@
 @use "../foundation/variable" as v;
+@use "../foundation/mixin" as m;
 
 .l-footer {
   background-color: v.$main-color;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 35px;
+  &__inner {
+    @include m.mq(tab) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

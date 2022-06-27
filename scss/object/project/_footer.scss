@@ -1,9 +1,23 @@
+@use "../../foundation/mixin" as m;
+
 .p-footer {
   &__logo {
     height: 60px;
   }
   &__menu {
     font-size: 1.4rem;
+    @include m.mq(tab) {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  &__icon {
+    img {
+      height: 20px;
+    }
+    @include m.mq(tab) {
+      display: none;
+    }
   }
   small {
     font-size: 1.1rem;
