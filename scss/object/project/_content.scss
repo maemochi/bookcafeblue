@@ -4,6 +4,7 @@
     font-size: 2rem;
   }
   &-menu {
+    margin-top: 70px;
     .c-text {
       margin-top: 20px;
     }
@@ -11,5 +12,8 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+  &-access {
+    margin-top: 70px;
   }
 }
