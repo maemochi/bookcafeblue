@@ -155,6 +155,12 @@ li {
   text-shadow: 1px 1px #739db9, -1px 1px #739db9, 1px -1px #739db9, -1px -1px #739db9, 0px 1px #739db9, 0px -1px #739db9, 1px 0px #739db9, -1px 0px #739db9;
   padding-bottom: 90px;
 }
+@media screen and (min-width: 1025px) {
+  .c-heading--top {
+    font-size: 5rem;
+    padding-bottom: 140px;
+  }
+}
 
 .c-text {
   line-height: 2.5;
@@ -269,6 +275,12 @@ li {
 }
 .p-content-menu .c-text {
   margin-top: 20px;
+}
+@media screen and (min-width: 830px) {
+  .p-content-menu__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .p-content-menu__area {
   display: flex;

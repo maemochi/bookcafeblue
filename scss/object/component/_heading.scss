@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .c-heading {
   border-bottom: solid 3px v.$main-color;
@@ -15,5 +16,9 @@
       0px -1px v.$main-color, 1px 0px v.$main-color, -1px 0px v.$main-color;
     // -webkit-text-stroke: 1px v.$main-color;
     padding-bottom: 90px;
+    @include m.mq(pc) {
+      font-size: 5rem;
+      padding-bottom: 140px;
+    }
   }
 }
