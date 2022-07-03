@@ -1,8 +1,50 @@
 @use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
 
 .p-header {
   display: grid;
   place-items: center;
+  &__button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      transition: all 0.4s;
+      position: absolute;
+      left: 13px;
+      height: 2px;
+      background-color: v.$font-color;
+      &:nth-of-type(1) {
+        top: 22px;
+        width: 50%;
+      }
+      &:nth-of-type(2) {
+        top: 29px;
+        width: 50%;
+      }
+    }
+    &.open span:nth-of-type(1) {
+      top: 20px;
+      left: 16px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 35%;
+    }
+    &.open span:nth-of-type(2) {
+      top: 32px;
+      left: 16px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 35%;
+    }
+  }
+  &__nav {
+    min-height: 200px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
   &__menu {
     text-align: center;
     margin: 60px 0;
