@@ -63,7 +63,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -76,8 +75,7 @@ select {
   }
 }
 html {
-  font-size: 62.5%;
-  /* sets the base font to 10px for easier math */
+  font-size: 62.5%; /* sets the base font to 10px for easier math */
 }
 
 body {
@@ -174,21 +172,23 @@ a {
   font-weight: bold;
 }
 
-.p-header {
-  display: grid;
-  place-items: center;
+.p-header__top {
+  height: 100px;
+  position: relative;
+  z-index: 20;
 }
 .p-header__button {
   width: 50px;
   height: 50px;
   position: fixed;
+  z-index: 30;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
 .p-header__button span {
   display: inline-block;
-  transition: all 0.4s;
+  transition: all 0.2s;
   position: absolute;
   left: 13px;
   height: 2px;
@@ -215,9 +215,18 @@ a {
   width: 35%;
 }
 .p-header__nav {
-  min-height: 200px;
+  width: 100%;
+  background-color: #739db9;
+  display: grid;
+  place-items: center;
   padding-top: 70px;
   padding-bottom: 100px;
+  display: none;
+}
+.p-header__nav.active {
+  display: grid;
+  z-index: 20;
+  position: fixed;
 }
 .p-header__menu {
   text-align: center;
@@ -231,6 +240,7 @@ a {
 
 .p-top {
   position: relative;
+  z-index: 10;
   min-height: 700px;
   display: flex;
 }
@@ -244,7 +254,7 @@ a {
 }
 .p-top__logo {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-top: 120px;
   padding-left: 5%;
 }
