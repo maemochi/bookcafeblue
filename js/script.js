@@ -1,6 +1,7 @@
 $(".p-header__button").click(function () {
   $(this).toggleClass("open");
   $(".p-header__nav").toggleClass("active");
+  $(".c-cover__overlay").toggleClass("active");
 });
 
 //===========jQuery作動のチェック用=============
