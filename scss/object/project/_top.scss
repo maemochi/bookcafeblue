@@ -16,14 +16,17 @@
     @include m.mq(tab) {
       width: 70vw;
     }
+    @include m.mq(pc) {
+      width: 65vw;
+    }
   }
   &__logo {
     position: relative;
     z-index: 10;
-    padding-top: 120px;
+    padding-top: 25vh;
     padding-left: 5%;
     img {
-      height: 100px;
+      height: 120px;
       @include m.mq(tab) {
         height: 150px;
       }

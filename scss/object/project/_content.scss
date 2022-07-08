@@ -1,4 +1,5 @@
 @use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
 
 .p-content {
   h3 {
@@ -11,17 +12,57 @@
       margin-top: 20px;
     }
     &__wrapper {
-      @include m.mq(md) {
-        display: flex;
-        justify-content: space-around;
+      @include m.mq(pc) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
       }
     }
     &__area {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      &::after {
+        height: 1px;
+        content: "";
+        // background: radial-gradient(v.$font-color 20%, transparent 30%) center/
+        //   1em;
+        background-size: 3px 1px;
+        background-image: linear-gradient(
+          to right,
+          v.$font-color,
+          v.$font-color 1px,
+          transparent 1px,
+          transparent 3px
+        );
+        flex: auto;
+        margin: 0 20px;
+      }
+      dd {
+        order: 1;
+      }
     }
   }
   &-access {
     margin-top: 70px;
+    &__wrapper {
+      @include m.mq(pc) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        padding-top: 50px;
+      }
+    }
+    &__text {
+      margin: 0;
+      padding: 50px 0;
+    }
+    &__icon {
+      display: none;
+      @include m.mq(pc) {
+        display: flex;
+        margin-top: 50px;
+      }
+    }
   }
 }
