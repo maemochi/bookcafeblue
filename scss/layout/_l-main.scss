@@ -1,0 +1,5 @@
+@use "../foundation/variable" as v;
+
+.l-main {
+  background-color: v.$back-color;
+}

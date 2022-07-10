@@ -23,9 +23,9 @@
       <!-- </div> -->
       <nav class="p-header__nav">
         <ul class="p-header__menu c-menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Access</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#access">Access</a></li>
         </ul>
         <ul class="c-icon">
           <li>
@@ -43,31 +43,33 @@
       </nav>
     </header>
 
-    <main>
+    <main class="l-main">
       <div class="l-top p-top">
         <div class="p-top__logo">
           <h1>
-            <img src="images/logo.png" alt="BOOKCAFE BLUE" />
+            <a href="#"><img src="images/logo.png" alt="BOOKCAFE BLUE" /></a>
           </h1>
         </div>
         <div class="p-top__hero"></div>
       </div>
       <div class="l-container">
-        <p class="c-heading--top">Have a calm, relaxing and quiet time.</p>
-        <section class="p-content p-content-about">
-          <h2 class="c-heading">About</h2>
-          <p class="c-text">
+        <p class="c-heading--top slideUp">
+          Have a calm, relaxing and quiet time.
+        </p>
+        <section id="about" class="p-content p-content-about">
+          <h2 class="c-heading slideUp">About</h2>
+          <p class="c-text slideUp">
             京都市左京区一条寺駅から徒歩5分、住宅街にある古本屋カフェ。
             <br />台湾茶は、台湾在住経験のある店主が厳選した茶葉を使用。
             <br />読書のお供にパイナップルケーキもどうぞ。
             <br />不定期で雑貨販売も実施しております。
           </p>
-          <img src="/images/coffee.jpg" alt="" />
+          <img src="/images/coffee.jpg" alt="" class="slideUp" />
         </section>
-        <section class="p-content p-content-menu">
-          <h2 class="c-heading">Menu</h2>
+        <section id="menu" class="p-content p-content-menu">
+          <h2 class="c-heading slideUp">Menu</h2>
           <div class="p-content-menu__wrapper">
-            <div>
+            <div class="slideUp">
               <h3>珈琲</h3>
               <div class="c-text">
                 <dl>
@@ -94,7 +96,7 @@
                 </dl>
               </div>
             </div>
-            <div>
+            <div class="slideUp">
               <h3>台湾茶</h3>
               <div class="c-text">
                 <dl>
@@ -121,7 +123,7 @@
                 </dl>
               </div>
             </div>
-            <div>
+            <div class="slideUp">
               <h3>お菓子と軽食</h3>
               <div class="c-text">
                 <dl>
@@ -150,9 +152,9 @@
             </div>
           </div>
         </section>
-        <section class="p-content p-content-access">
-          <h2 class="c-heading">Access</h2>
-          <div class="p-content-access__wrapper">
+        <section id="access" class="p-content p-content-access">
+          <h2 class="c-heading slideUp">Access</h2>
+          <div class="p-content-access__wrapper slideUp">
             <div class="c-text p-content-access__text">
               <p>叡山電鉄一条寺駅から徒歩約5分</p>
               <p>〒 606-8184 <br />京都府京都市左京区一条寺×××</p>
@@ -200,15 +202,16 @@
 
     <footer class="l-footer p-footer">
       <div class="l-footer__inner">
-        <img
-          class="p-footer__logo"
-          src="/images/logo.png"
-          alt="BOOKCAFE BLUE"
-        />
+        <a href="#"
+          ><img
+            class="p-footer__logo"
+            src="/images/logo.png"
+            alt="BOOKCAFE BLUE"
+        /></a>
         <ul class="p-footer__menu c-menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Access</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#access">Access</a></li>
         </ul>
       </div>
       <ul class="c-icon p-footer__icon">

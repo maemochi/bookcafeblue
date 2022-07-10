@@ -2,10 +2,11 @@
 
 html {
   font-size: 62.5%; /* sets the base font to 10px for easier math */
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: v.$back-color;
+  background-color: v.$main-color;
   font-family: "Sawarabi Gothic", sans-serif;
   font-size: 1.6rem;
   color: v.$font-color;
