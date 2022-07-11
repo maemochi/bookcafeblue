@@ -1,0 +1,66 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-nav {
+  width: 100%;
+  background-color: v.$main-color;
+  display: grid;
+  place-items: center;
+  // padding-top: 70px;
+  // padding-bottom: 100px;
+  // display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-1000px);
+  transition: all 0.5s ease;
+  &.active {
+    // display: grid;
+    visibility: visible;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s ease;
+  }
+  &__button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 200;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      transition: all 0.2s;
+      position: absolute;
+      left: 13px;
+      height: 2px;
+      background-color: v.$font-color;
+      &:nth-of-type(1) {
+        top: 20px;
+        left: 16px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 35%;
+      }
+      &:nth-of-type(2) {
+        top: 32px;
+        left: 16px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 35%;
+      }
+    }
+  }
+  &__menu {
+    text-align: center;
+    margin: 60px 0;
+    @include m.mq(tab) {
+      font-size: 3rem;
+    }
+  }
+}

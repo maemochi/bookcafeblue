@@ -210,14 +210,35 @@ a {
   position: relative;
   transform: translate(0, -100px);
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.p-header__logo {
+  height: 60px;
+  width: 200px;
+  background-image: url(/images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1025px) {
+  .p-header__logo {
+    height: 80px;
+  }
+}
+.p-header__buttonBlock {
+  position: relative;
+  height: 50px;
+  width: 50px;
 }
 .p-header__button {
   width: 50px;
   height: 50px;
-  position: fixed;
+  position: absolute;
   z-index: 200;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
   cursor: pointer;
 }
 .p-header__button span {
@@ -248,38 +269,12 @@ a {
   transform: translateY(-6px) rotate(45deg);
   width: 35%;
 }
-.p-header__nav {
-  width: 100%;
-  background-color: #739db9;
-  display: grid;
-  place-items: center;
-  padding-top: 70px;
-  padding-bottom: 100px;
-  visibility: hidden;
-  transform: translateY(-1000px);
-  transition: 0.5s;
-}
-.p-header__nav.active {
-  visibility: visible;
-  transform: translateY(0);
-  z-index: 100;
-  position: fixed;
-  transition: 0.5s;
-}
-.p-header__menu {
-  text-align: center;
-  margin: 60px 0;
-}
-@media screen and (min-width: 600px) {
-  .p-header__menu {
-    font-size: 3rem;
-  }
-}
 .p-header.sticky {
   position: fixed;
   background-color: #ddd4cc;
   transform: translate(0, 0);
-  transition: 0.5s;
+  transition: all 0.5s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .p-top {
@@ -434,6 +429,68 @@ a {
   .p-content-access__icon {
     display: flex;
     margin-top: 50px;
+  }
+}
+
+.p-nav {
+  width: 100%;
+  background-color: #739db9;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-1000px);
+  transition: all 0.5s ease;
+}
+.p-nav.active {
+  visibility: visible;
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  transition: all 0.5s ease;
+}
+.p-nav__button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 200;
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+}
+.p-nav__button span {
+  display: inline-block;
+  transition: all 0.2s;
+  position: absolute;
+  left: 13px;
+  height: 2px;
+  background-color: #192f60;
+}
+.p-nav__button span:nth-of-type(1) {
+  top: 20px;
+  left: 16px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 35%;
+}
+.p-nav__button span:nth-of-type(2) {
+  top: 32px;
+  left: 16px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 35%;
+}
+.p-nav__menu {
+  text-align: center;
+  margin: 60px 0;
+}
+@media screen and (min-width: 600px) {
+  .p-nav__menu {
+    font-size: 3rem;
   }
 }
 
