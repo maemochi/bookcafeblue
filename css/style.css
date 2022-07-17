@@ -438,21 +438,19 @@ a {
   display: grid;
   place-items: center;
   visibility: hidden;
-  height: 0;
+  position: fixed;
+  padding: 0;
   opacity: 0;
-  transform: translateY(-1000px);
   transition: all 0.5s ease;
 }
 .p-nav.active {
   visibility: visible;
-  height: auto;
   padding-top: 70px;
   padding-bottom: 100px;
   opacity: 1;
-  transform: translateY(0);
   z-index: 100;
-  position: fixed;
   top: 0;
+  right: 0;
   transition: all 0.5s ease;
 }
 .p-nav__button {
@@ -491,6 +489,14 @@ a {
 @media screen and (min-width: 600px) {
   .p-nav__menu {
     font-size: 3rem;
+  }
+}
+.p-nav .c-icon img {
+  height: 20px;
+}
+@media screen and (min-width: 600px) {
+  .p-nav .c-icon img {
+    height: 30px;
   }
 }
 

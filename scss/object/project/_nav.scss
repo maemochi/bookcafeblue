@@ -6,25 +6,23 @@
   background-color: v.$main-color;
   display: grid;
   place-items: center;
-  // padding-top: 70px;
-  // padding-bottom: 100px;
   // display: none;
   visibility: hidden;
-  height: 0;
+  position: fixed;
+  // height: 0;
+  padding: 0;
   opacity: 0;
-  transform: translateY(-1000px);
   transition: all 0.5s ease;
   &.active {
     // display: grid;
     visibility: visible;
-    height: auto;
+    // height: auto;
     padding-top: 70px;
     padding-bottom: 100px;
     opacity: 1;
-    transform: translateY(0);
     z-index: 100;
-    position: fixed;
     top: 0;
+    right: 0;
     transition: all 0.5s ease;
   }
   &__button {
@@ -61,6 +59,14 @@
     margin: 60px 0;
     @include m.mq(tab) {
       font-size: 3rem;
+    }
+  }
+  .c-icon {
+    img {
+      height: 20px;
+      @include m.mq(tab) {
+        height: 30px;
+      }
     }
   }
 }
