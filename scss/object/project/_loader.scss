@@ -1,0 +1,93 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100vh;
+  background-color: v.$back-color;
+}
+$time: 1s;
+.p-loader__icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 50%;
+  top: 50%;
+  margin: -24px 0 0 -24px;
+  span {
+    animation-name: loading;
+    animation-duration: $time;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    display: block;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    background-color: v.$font-color;
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: $time * 0.25;
+    }
+    &:nth-child(3) {
+      clear: both;
+      float: right;
+      animation-delay: $time * 0.5;
+    }
+    &:nth-child(4) {
+      animation-delay: $time * 0.75;
+    }
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+//ローディング後の画面オープン
+.p-loader.open {
+  animation-name: slideOut;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+@keyframes slideOut {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+// ローディング画面でのスクロール中止
+body {
+  animation-name: disableScroll;
+  animation-fill-mode: both;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+@keyframes disableScroll {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
