@@ -66,6 +66,10 @@
     &__text {
       margin: 0;
       padding: 50px 0;
+      dl {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+      }
     }
     &__icon {
       display: none;
