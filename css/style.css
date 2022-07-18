@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -458,8 +459,8 @@ a {
   height: 50px;
   position: absolute;
   z-index: 200;
-  top: 22px;
-  right: 22px;
+  top: 24px;
+  right: 20px;
   cursor: pointer;
 }
 .p-nav__button span {
@@ -500,6 +501,50 @@ a {
   }
 }
 
+.p-slidewrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.p-slidewrap ul {
+  display: flex;
+}
+.p-slidewrap li {
+  width: 400px;
+}
+
+.p-slidewrap ul {
+  -webkit-animation-name: loop-slide;
+          animation-name: loop-slide; /* アニメーション名 */
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s; /* 開始から終了までの所要時間 */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /* アニメーションのループ回数 */
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /* 動きの加減速 */
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; /* アニメーションが開始するまでの遅延時間 */
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; /* アニメーション開始前・終了後の挙動 */
+}
+
+@-webkit-keyframes loop-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 /* Foundation
 ==========================*/
 /* Layout

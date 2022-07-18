@@ -30,7 +30,7 @@ $(window).scroll(function () {
     if (scroll > blockPosition - windowHeight + 100) {
       $(this).addClass("move");
     } else {
-      $(this).removeClass("move");
+      // $(this).removeClass("move");
     }
   });
 });
