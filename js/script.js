@@ -3,14 +3,14 @@ $(".p-header__button").click(function () {
   $(this).toggleClass("open");
   $(".p-nav").toggleClass("active");
   $(".c-cover__overlay").toggleClass("active");
-  $("body").css("overflow", "hidden");
+  $("html").css("overflow", "hidden");
 });
 //navボタンをクリックした時の処理
 $(".p-nav__button").click(function () {
   $(".p-header__button").removeClass("open");
   $(".p-nav").removeClass("active");
   $(".c-cover__overlay").removeClass("active");
-  $("body").css("overflow", "visible");
+  $("html").css("overflow", "visible");
 });
 
 // nav内リンクをクリックした時の処理
@@ -18,7 +18,7 @@ $(".p-nav a").click(function () {
   $(".p-header__button").removeClass("open");
   $(".p-nav").removeClass("active");
   $(".c-cover__overlay").removeClass("active");
-  $("body").css("overflow", "visible");
+  $("html").css("overflow", "visible");
 });
 
 // スクロール時のアニメーション(ふわっとスライド表示)
@@ -51,7 +51,7 @@ $(function () {
     const href = $(this).attr("href");
     const target = $(href == "#" || href == "" ? "html" : href);
     const position = target.offset().top - headerHight;
-    $("html, body").animate({ scrollTop: position }, 300, "linear");
+    $("html, body").animate({ scrollTop: position }, 100, "swing");
     return false;
   });
 });

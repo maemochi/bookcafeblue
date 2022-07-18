@@ -77,7 +77,7 @@ select {
 }
 html {
   font-size: 62.5%; /* sets the base font to 10px for easier math */
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -520,8 +520,8 @@ a {
 .p-slidewrap ul {
   -webkit-animation-name: loop-slide;
           animation-name: loop-slide; /* アニメーション名 */
-  -webkit-animation-duration: 40s;
-          animation-duration: 40s; /* 開始から終了までの所要時間 */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /* 開始から終了までの所要時間 */
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; /* アニメーションのループ回数 */
   -webkit-animation-timing-function: linear;
@@ -678,7 +678,7 @@ body {
     overflow: hidden;
   }
   100% {
-    overflow: auto;
+    overflow: visible;
   }
 }
 
@@ -687,7 +687,7 @@ body {
     overflow: hidden;
   }
   100% {
-    overflow: auto;
+    overflow: visible;
   }
 }
 /* Foundation

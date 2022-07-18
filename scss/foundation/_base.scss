@@ -2,7 +2,7 @@
 
 html {
   font-size: 62.5%; /* sets the base font to 10px for easier math */
-  scroll-behavior: smooth;
+  scroll-behavior: auto; //reset cssのsmoothを打消し
 }
 
 body {
